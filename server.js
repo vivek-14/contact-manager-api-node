@@ -1,15 +1,16 @@
 const express = require("express");
 const connectDb = require("./config/database.js");
-const errorHandler = require("./middleware/errorHandlar.js");
+const errorHandler = require("./middleware/errorHandler.js");
 const dotenv = require("dotenv").config();
 
 connectDb();
+
 const app = express();
 
 const port = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
-	res.send(`Server is runnig on ${port}`);
+	res.send(`Server is running on ${port}`);
 });
 
 // Json body parser to read request body

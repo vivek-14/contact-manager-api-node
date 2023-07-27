@@ -1,0 +1,109 @@
+{
+    "info": {
+        "name": "Users",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "registerNewUser",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:5000/api/users/register",
+                    "path": [
+                        "api",
+                        "users",
+                        "register"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"first_name\": \"Vivek\",\n  \"last_name\": \"Gondaliya\",\n  \"email\": \"vivek_gondaliya@xyz.com\",\n  \"password\": \"123456789\"\n}"
+                }
+            }
+        },
+        {
+            "name": "login",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:5000/api/users/login",
+                    "path": [
+                        "api",
+                        "users",
+                        "login"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"email\": \"vivek_gondaliya@xyz.com\",\n  \"password\": \"123456789\"\n}"
+                }
+            }
+        },
+        {
+            "name": "currentUser",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:5000/api/users/current",
+                    "path": [
+                        "api",
+                        "users",
+                        "current"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000"
+                },
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer < Access Token >"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"email\": \"vivek_gondaliya@xyz.com\",\n  \"password\": \"123456789\"\n}"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImZpcnN0X25hbWUiOiJOaWtpdGEiLCJlbWFpbCI6Im5pa2l0X2dvbmRhbGl5YUBnbWFpbC5jb20iLCJpZCI6IjYzZmJlNjc0ZDAxNjBhYWNmN2JmMmQ0MCJ9LCJpYXQiOjE2Nzc0NTgwOTksImV4cCI6MTY3NzQ1ODE1OX0.ow2LDv335BQwzh8-0I7ZvmjyC8mJxPtXZVZ9MwIwQDs",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

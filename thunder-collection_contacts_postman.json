@@ -1,0 +1,121 @@
+{
+    "info": {
+        "name": "contacts",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "getContactByID",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:5000/api/contacts",
+                    "path": [
+                        "api",
+                        "contacts"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImZpcnN0X25hbWUiOiJOaWtpdGEiLCJlbWFpbCI6Im5pa2l0X2dvbmRhbGl5YUBnbWFpbC5jb20iLCJpZCI6IjYzZmJlNjc0ZDAxNjBhYWNmN2JmMmQ0MCJ9LCJpYXQiOjE2Nzc0NjcwNzQsImV4cCI6MTY3NzQ2Nzk3NH0.2B85fisbdHYPtFzv6RPkHi-DVvWjlH4zP82ST9fVOQ0",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "updateContactById",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "http://localhost:5000/api/contacts/63f6944e10cbe0d8be46381d",
+                    "path": [
+                        "api",
+                        "contacts",
+                        "63f6944e10cbe0d8be46381d"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"name\": \"Vivek Gondaliya\",\n  \"email\": \"vivek.demo@gmail.com\",\n  \"phone\": \"0123456789\"\n}"
+                }
+            }
+        },
+        {
+            "name": "updateContactById",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:5000/api/contacts/63f6944e10cbe0d8be46381d",
+                    "path": [
+                        "api",
+                        "contacts",
+                        "63f6944e10cbe0d8be46381d"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000"
+                }
+            }
+        },
+        {
+            "name": "InsertNewContact",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:5000/api/contacts/",
+                    "path": [
+                        "api",
+                        "contacts"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"name\": \"John doe\",\n  \"email\": \"john@gmail.com\",\n  \"phone\": \"2135687561\"\n}"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImZpcnN0X25hbWUiOiJOaWtpdGEiLCJlbWFpbCI6Im5pa2l0X2dvbmRhbGl5YUBnbWFpbC5jb20iLCJpZCI6IjYzZmJlNjc0ZDAxNjBhYWNmN2JmMmQ0MCJ9LCJpYXQiOjE2Nzc0NjcwNzQsImV4cCI6MTY3NzQ2Nzk3NH0.2B85fisbdHYPtFzv6RPkHi-DVvWjlH4zP82ST9fVOQ0",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
